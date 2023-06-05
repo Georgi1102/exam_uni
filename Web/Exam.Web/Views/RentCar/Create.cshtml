@@ -1,0 +1,29 @@
+﻿@model RentCarServiceModel
+
+<form class="auth-form" action="/RentCar/Create" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <input asp-for="@Model.StartDate" class="input-field" placeholder="StartDate" name="StartDate" />
+    <span asp-validation-for="@Model.StartDate" class="text-danger"></span>
+
+    <input asp-for="@Model.EndDate" class="input-field" placeholder="EndDate" name="EndDate" />
+    <span asp-validation-for="@Model.EndDate" class="text-danger"></span>
+
+    <input asp-for="@Model.CarModel" class="input-field" placeholder="CarModel" name="CarModel" />
+    <span asp-validation-for="@Model.CarModel" class="text-danger"></span>
+
+
+    <input asp-for="@Model.CarId" class="input-field" placeholder="CarId" name="CarId" />
+    <span asp-validation-for="@Model.CarId" class="text-danger"></span>
+
+    <input asp-for="@Model.Price" class="input-field" placeholder="Price" name="Price" />
+    <span asp-validation-for="@Model.Price" class="text-danger"></span>
+
+    <input asp-for="@Model.StatusId" class="input-field" placeholder="StatusId" name="StatusId" />
+    <span asp-validation-for="@Model.StatusId" class="text-danger"></span>
+
+    <div class="button-holder">
+        <button type="submit" class="orange-link">Create</button>
+    </div>
+</form>

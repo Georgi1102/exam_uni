@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Exam.Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navigation-bar">
+            <a class="blank-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            @if (!this.User.Identity.IsAuthenticated)
+            {
+                <a class="blank-link" href="/Identity/Account/Login">Login</a>
+                <a class="blank-link" href="/Identity/Account/Register">Register</a>
+            }
+            else
+            {
+                <a class="blank-link" href="/Identity/Account/Logout">Logout</a>
+                <a class="blank-link" href="/Cars/Create">Create Car</a>
+                <a class="blank-link" href="/Cars/AllCars">All Cars</a>
+            }
+
+
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

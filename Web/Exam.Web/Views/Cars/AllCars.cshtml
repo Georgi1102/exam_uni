@@ -1,0 +1,35 @@
+﻿@model IEnumerable<CarServiceModel>
+
+<div class="w-75 mx-auto">
+    <table class="table">
+        <thead>
+            <tr class="row">
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var car in Model)
+            {
+                <tr class="row">
+
+                    <td class="col-md-2">@car.Mark</td>
+                    <td class="col-md-2">@car.Model</td>
+                    <td class="col-md-2">@car.YearOfProduction</td>
+                    <td class="col-md-2">@car.Seats</td>
+                    <td class="col-md-2">@car.Descritption</td>
+                    <td class="col-md-2">@car.Price</td>
+                    <td class="col-md-3"> <img src="@car.PictureURL" style="width:90px; height:90px;"></td>
+
+                    <td class="col-md-5 d-flex justify-content-around">
+                        <a class="blank-link" href="/Cars/Edit/@car.Id">Edit</a>
+                        <a class="blank-link" href="/Cars/Delete/@car.Id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+

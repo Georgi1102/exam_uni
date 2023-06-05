@@ -1,0 +1,34 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form class="auth-form" action="/Identity/Account/Register" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+
+    <input asp-for="Input.FirstName" class="input-field" placeholder="FirstName" />
+    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+
+
+    <input asp-for="Input.LastName" class="input-field" placeholder="LastName" />
+    <span asp-validation-for="Input.Username" class="text-danger"></span>
+
+    <input asp-for="Input.Username" class="input-field" placeholder="Username" />
+    <span asp-validation-for="Input.Username" class="text-danger"></span>
+
+    <input asp-for="Input.Password" class="input-field" placeholder="Password" />
+    <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+
+
+    <div class="button-holder">
+        <button type="submit" class="orange-link">Register</button>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

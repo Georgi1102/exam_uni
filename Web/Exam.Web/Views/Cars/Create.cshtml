@@ -1,0 +1,34 @@
+﻿@model CarServiceModel
+
+<form class="auth-form" action="/Cars/Create" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <input asp-for="@Model.Mark" class="input-field" placeholder="Mark" name="Mark" />
+    <span asp-validation-for="@Model.Mark" class="text-danger"></span>
+
+    <input asp-for="@Model.Model" class="input-field" placeholder="Model" name="Model" />
+    <span asp-validation-for="@Model.Model" class="text-danger"></span>
+
+    <input asp-for="@Model.YearOfProduction" class="input-field" placeholder="YearOfProduction" name="YearOfProduction" />
+    <span asp-validation-for="@Model.YearOfProduction" class="text-danger"></span>
+
+
+    <input asp-for="@Model.Seats" class="input-field" placeholder="Seats" name="Seats" />
+    <span asp-validation-for="@Model.Seats" class="text-danger"></span>
+
+    <input asp-for="@Model.Descritption" class="input-field" placeholder="Descritption" name="Descritption" />
+    <span asp-validation-for="@Model.Descritption" class="text-danger"></span>
+
+    <input asp-for="@Model.Price" class="input-field" placeholder="Price" name="Price" />
+    <span asp-validation-for="@Model.Price" class="text-danger"></span>
+
+    
+
+    <input asp-for="@Model.PictureURL" class="input-field" placeholder="PictureURL" name="PictureURL" />
+    <span asp-validation-for="@Model.PictureURL" class="text-danger"></span>
+
+    <div class="button-holder">
+        <button type="submit" class="orange-link">Create</button>
+    </div>
+</form>
